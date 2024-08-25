@@ -25,6 +25,7 @@ div.sub-content p {
 div.sub-content h5 {
     margin-top: -6rem;
     color: #000;
+    font-size: 3rem;
 }
 .scores {
     display: flex;

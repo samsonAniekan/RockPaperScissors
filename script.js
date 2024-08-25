@@ -8,6 +8,8 @@
     const computerChar = document.querySelector(".computer-char");
     const playerScore = document.querySelector(".player-scores");
     const computerScore = document.querySelector(".computer-scores");
+    const displayedMessage = document.querySelector(".displayed-message-cls");
+    const outputMessage = document.querySelector(".output-message-cls");
 
     let updateScore = 0;
 
@@ -39,6 +41,7 @@
         if (playerMove === "rock") {
             if(computerChoice === "rock") {
                 result = "a tie";
+                displayedMessage.textContent = `Its a tie rock ties with ${playerMove}`;
             } else if (computerChoice === "paper") {
                 result = "you lose";
                 computerScore.innerHTML = `<p class="computer-scores">Computer: ${++updateScore}</p>`;
@@ -64,10 +67,10 @@
 
             } else if (computerChoice === "rock") {
                 result = "you lose"
-                // playerChar.innerHTML =  `<p class ="rock-selector">✋</p>`
+                computerScore.innerHTML = `<p class="computer-scores">Computer: ${++updateScore}</p>`;
             } else if (computerChoice === "paper") {
                 result = "you win"
-                playerScore.innerHTML = `<p> class="player-scores">Player: ${updateScore}</p>`
+                playerScore.innerHTML = `<p class="player-scores">Player: ${++updateScore}</p>`
             }
             console.log(result);
         }
